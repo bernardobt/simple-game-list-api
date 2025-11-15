@@ -1,0 +1,46 @@
+:root {
+    --bs-primary: #AF0171;      /* Primary Color */
+    --bs-secondary: #22BD01;    /* Secondary Color */
+    --bs-success: #28a745;      /* Success Color */
+    --bs-info: #17a2b8;         /* Info Color */
+    --bs-warning: #ffc107;      /* Warning Color */
+    --bs-danger: #dc3545;       /* Danger Color */
+    --bs-light: #f8f9fa;        /* Light Color */
+    --bs-dark: #343a40;         /* Dark Color */
+    
+    --bs-custom-color-1: #e74c3c;  /* Custom Red */
+    --bs-custom-color-2: #8e44ad;  /* Custom Purple */
+    --bs-custom-color-3: #f39c12;  /* Custom Orange */
+    --bs-custom-color-4: #1abc9c;  /* Custom Teal */
+    --bs-custom-color-5: #2980b9;  /* Custom Blue */
+    
+    --bs-accent-1: #f1c40f;    /* Bright Yellow */
+    --bs-accent-2: #e67e22;    /* Bright Orange */
+    --bs-accent-3: #d35400;    /* Dark Orange */
+    --bs-accent-4: #c0392b;    /* Dark Red */
+}
+
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.btn-secondary {
+    background-color: var(--bs-secondary);
+    border-color: var(--bs-secondary);
+}
+
+.alert-success {
+    background-color: var(--bs-success);
+    border-color: var(--bs-success);
+}
+
+.alert-danger {
+    background-color: var(--bs-danger);
+    border-color: var(--bs-danger);
+}
+
+.card {
+    background-color: var(--bs-light);
+}
+
