@@ -17,6 +17,8 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.get('/', (req: Request, res: Response) => {
     res.render('home', {
         title: 'Home',
+        twitchChannel: process.env.EMBED_TWITCH_CHANNEL,
+        embedParent: process.env.EMBED_TWITCH_PARENT
     });
 });
 
