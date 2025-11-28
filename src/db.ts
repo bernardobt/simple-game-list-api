@@ -13,10 +13,20 @@ const pool = new Pool({
 });
 
 
-export const fetchData = async () => {
+export const fetchGames = async () => {
     const client = await pool.connect();
     try {
-        const res = await client.query('SELECT id, name_jp, name_en, platform, status FROM games'); // replace with your query
+        const res = await client.query('SELECT id, name_jp, name_en, platform, status FROM games'); 
+        return res.rows; 
+    } finally {
+        client.release(); 
+    }
+};
+
+export const fetchBooks = async () => {
+    const client = await pool.connect();
+    try {
+        const res = await client.query('SELECT id, name_jp, name_en, platform, status FROM books'); 
         return res.rows; 
     } finally {
         client.release(); 

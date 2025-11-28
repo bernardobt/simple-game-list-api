@@ -1,6 +1,6 @@
 import express, { Request, Response } from 'express';
 import path from 'path'
-import { fetchData } from './db';
+import { fetchBooks, fetchGames } from './db';
 import dotenv from 'dotenv'
 
 dotenv.config();
@@ -25,9 +25,22 @@ app.get('/', (req: Request, res: Response) => {
 
 app.get('/games', async (req: Request, res: Response) => {
   try {
-        const data = await fetchData();   
-        res.render('table', {
+        const data = await fetchGames();   
+        res.render('games', {
         title: 'Games',
+        data: data
+    });
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Server error');
+    }   
+});
+
+app.get('/books', async (req: Request, res: Response) => {
+  try {
+        const data = await fetchBooks();   
+        res.render('books', {
+        title: 'Books',
         data: data
     });
     } catch (err) {
